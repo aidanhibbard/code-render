@@ -7,7 +7,7 @@
 ### Highlights
 
 - 🎨 **Full gradient tooling** — dial in backgrounds that look great in docs, slides, and socials
-- 🌈 **Languages + themes powered by Shiki** — pick your syntax language and theme instantly
+- 🌈 **Languages + themes powered by Shiki** — pick your syntax language and themes
 - 🧩 **Design-first controls** — padding, radius, shadows, layout, and more
 - 🖼️ **Export-ready output** — generate clean images of your code for sharing
 - 🧑‍💻 **Open source** — transparent, hackable, and community-friendly
