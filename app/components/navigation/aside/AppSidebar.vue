@@ -25,7 +25,7 @@ const props = withDefaults(defineProps<SidebarProps>(), {
 <template>
   <Sidebar v-bind="props">
     <SidebarHeader class="p-2">
-      <header aria-label="Throw settings">
+      <header aria-label="Settings Menu">
         <SidebarMenu>
           <SidebarMenuItem>
             <!-- Render as a non-interactive header block (not a <button>), while keeping
@@ -36,7 +36,7 @@ const props = withDefaults(defineProps<SidebarProps>(), {
               class="cursor-default hover:bg-transparent hover:text-inherit active:bg-transparent active:text-inherit"
             >
               <Settings2 />
-              <span class="font-medium">Image Settings</span>
+              <span class="font-medium">Code Render</span>
             </SidebarMenuButton>
           </SidebarMenuItem>
         </SidebarMenu>
