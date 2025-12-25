@@ -32,7 +32,7 @@ const props = withDefaults(defineProps<SidebarProps>(), {
                 the same collapsed/rail icon + tooltip behavior from SidebarMenuButton. -->
             <SidebarMenuButton
               as="div"
-              tooltip="Throw settings"
+              tooltip="Settings Menu"
               class="cursor-default hover:bg-transparent hover:text-inherit active:bg-transparent active:text-inherit"
             >
               <Settings2 />
