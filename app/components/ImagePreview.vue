@@ -198,9 +198,10 @@ const stopResize = () => {
   resizeSide.value = null
 }
 
+watch([code, () => store.language, () => store.theme], highlight, { immediate: true })
+watch(code, syncTextareaHeight, { immediate: true })
+
 onMounted(() => {
-  watch([code, () => store.language, () => store.theme], highlight, { immediate: true })
-  watch(code, syncTextareaHeight, { immediate: true })
   window.addEventListener('pointermove', onResizeMove)
   window.addEventListener('pointerup', stopResize)
 })
