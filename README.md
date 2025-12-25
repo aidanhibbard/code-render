@@ -2,7 +2,7 @@
 
 ## Generate images of your code with freedom for design
 
-<img width="2856" height="1548" alt="Untitled-1@2x" src="https://github.com/user-attachments/assets/6b23ec8b-5e1f-4448-a7e7-3a3ff4e343bf" />
+<img width="3000" height="1468" alt="store-event d ts@2x" src="https://github.com/user-attachments/assets/60f52a34-3c3d-4675-b456-852fdd935ab0" />
 
 ### Highlights
 
