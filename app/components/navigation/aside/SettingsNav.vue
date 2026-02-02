@@ -555,35 +555,61 @@ watch(() => store.backgroundColor, (v) => {
       </SidebarMenuItem>
 
       <SidebarMenuItem>
-        <SidebarMenuButton
-          as="div"
-          tooltip="Dark mode"
-        >
-          <component :is="store.dark ? Moon : Sun" />
-          <span>Dark mode</span>
-          <span class="ml-auto">
-            <Switch
-              :model-value="store.dark"
-              @update:model-value="(v: boolean) => commit({ dark: v })"
-            />
-          </span>
-        </SidebarMenuButton>
+        <Popover>
+          <PopoverTrigger as-child>
+            <SidebarMenuButton tooltip="Dark mode">
+              <component :is="store.dark ? Moon : Sun" />
+              <span>Dark mode</span>
+            </SidebarMenuButton>
+          </PopoverTrigger>
+          <SidebarMenuBadge>
+            {{ store.dark ? 'On' : 'Off' }}
+          </SidebarMenuBadge>
+          <PopoverContent
+            side="right"
+            align="start"
+            class="w-48"
+          >
+            <div class="flex items-center justify-between">
+              <div class="text-sm font-medium">
+                Dark mode
+              </div>
+              <Switch
+                :model-value="store.dark"
+                @update:model-value="(v: boolean) => commit({ dark: v })"
+              />
+            </div>
+          </PopoverContent>
+        </Popover>
       </SidebarMenuItem>
 
       <SidebarMenuItem>
-        <SidebarMenuButton
-          as="div"
-          tooltip="Line numbers"
-        >
-          <Hash />
-          <span>Line numbers</span>
-          <span class="ml-auto">
-            <Switch
-              :model-value="store.lineNumbers"
-              @update:model-value="(v: boolean) => commit({ lineNumbers: v })"
-            />
-          </span>
-        </SidebarMenuButton>
+        <Popover>
+          <PopoverTrigger as-child>
+            <SidebarMenuButton tooltip="Line numbers">
+              <Hash />
+              <span>Line numbers</span>
+            </SidebarMenuButton>
+          </PopoverTrigger>
+          <SidebarMenuBadge>
+            {{ store.lineNumbers ? 'On' : 'Off' }}
+          </SidebarMenuBadge>
+          <PopoverContent
+            side="right"
+            align="start"
+            class="w-48"
+          >
+            <div class="flex items-center justify-between">
+              <div class="text-sm font-medium">
+                Line numbers
+              </div>
+              <Switch
+                :model-value="store.lineNumbers"
+                @update:model-value="(v: boolean) => commit({ lineNumbers: v })"
+              />
+            </div>
+          </PopoverContent>
+        </Popover>
       </SidebarMenuItem>
 
       <SidebarMenuItem>
@@ -680,19 +706,32 @@ watch(() => store.backgroundColor, (v) => {
       </SidebarMenuItem>
 
       <SidebarMenuItem>
-        <SidebarMenuButton
-          as="div"
-          tooltip="Glass"
-        >
-          <Eye />
-          <span>Glass</span>
-          <span class="ml-auto">
-            <Switch
-              :model-value="store.glass"
-              @update:model-value="(v: boolean) => commit({ glass: v })"
-            />
-          </span>
-        </SidebarMenuButton>
+        <Popover>
+          <PopoverTrigger as-child>
+            <SidebarMenuButton tooltip="Glass">
+              <Eye />
+              <span>Glass</span>
+            </SidebarMenuButton>
+          </PopoverTrigger>
+          <SidebarMenuBadge>
+            {{ store.glass ? 'On' : 'Off' }}
+          </SidebarMenuBadge>
+          <PopoverContent
+            side="right"
+            align="start"
+            class="w-48"
+          >
+            <div class="flex items-center justify-between">
+              <div class="text-sm font-medium">
+                Glass
+              </div>
+              <Switch
+                :model-value="store.glass"
+                @update:model-value="(v: boolean) => commit({ glass: v })"
+              />
+            </div>
+          </PopoverContent>
+        </Popover>
       </SidebarMenuItem>
 
       <SidebarMenuItem>
